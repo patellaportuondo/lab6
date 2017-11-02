@@ -1,3 +1,4 @@
+/* global $ */
 $(document).ready(function (){
     $("#search").click(function(){
         $.ajax({
@@ -7,8 +8,8 @@ $(document).ready(function (){
             success: function(data){
                 $("#result").html(data);
             }
-        })
-    })
+        });
+    });
     
     $("#searchall").click(function(){
         $.ajax({
@@ -23,9 +24,9 @@ $(document).ready(function (){
                     list += "<p>"+$(this).find("meaning").text()+"</p>";
                     list += "<p>"+"-"+$(this).find("author").text()+"</p>";
                     $("#result ol").append("<li>"+list+"</li>");
-                })
+                });
                 
             }
-        })
-    })
-})
+        });
+    });
+});
